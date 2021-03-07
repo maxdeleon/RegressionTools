@@ -25,12 +25,15 @@ print(model_summary)
 balance_sheet['res model'] = predictions
 
 
-
+# Doesnt match up properly with teh excel sheet
 ax = plt.gca()
 balance_sheet.plot(y='Residential Consumption', color='blue', ax=ax, figsize=(10,5))
 balance_sheet.plot(y='res model', color='red',style='--', ax=ax)
-
-
+plt.ylabel('Nat gas Usage (Bcf)')
+#save plot
+plt.savefig('plot.png')
 plt.show(figsize=(20,7))
+
+
 
 
